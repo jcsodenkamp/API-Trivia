@@ -8,7 +8,6 @@ print('In order to win you must correclty answer 7 our of 10 questions to win.\n
 
 time.sleep(4)
 
-
 answer = input('Are you ready to play? Enter: Yes or No? ')
 if answer.lower().startswith('y'):
     print('\nOk, let\'s get started\n')
@@ -46,9 +45,7 @@ for question_number, question in enumerate(questions):
         print('\nCorrect!\n')
         score += 1
     else:
-        print(
-            f'\nSorry that is incorrect, the correct answer was: {questions[question][-1]}\n')
-
+        print(f'\nSorry that is incorrect, the correct answer was: {questions[question][-1]}\n')
 
 if score >= 7:
     print(f'Your final score is {score} out of 10 you win')
