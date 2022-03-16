@@ -1,7 +1,7 @@
 from tkinter import N
 import time
 import sys
-
+#I go the trivia question from https://www.funtrivia.com/quizzes/music/music_by_year/2000s_music.html
 name = input('What is your name? ')
 print(f'Hello {name} and welcome to 2000 - 2010 Music Trivia: Which Singer Am I?')
 print('In order to win you must correclty answer 6 our of 10 questions to win.\n')
@@ -18,7 +18,7 @@ elif answer.lower().startswith('n'):
 
 time.sleep(2)
 
-
+#I go the trivia question from https://www.funtrivia.com/quizzes/music/music_by_year/2000s_music.html
 questions = {
     'I am a young female soul/R&B singer and songwriter who became the best-selling R&B artist in 2001. My debut album, "Songs In A Minor", was an instant success and catapulted me to fame. What is my name?': ['a. Kandi Burrus', 'b. Alicia Keys', 'c. Lauryn Hill', 'd. Queen Latifah', 'b'],
     'I cannot remember my name, but I know that I started out as a member of The Mickey Mouse Club. I contributed a song, "Reflection", to the soundtrack of Disney film "Mulan", and have created several fragrances. Who am I?': ['a. Linda Perry', 'b. Mariah Carey', 'c. Samantha Mumba', 'd. Christina Aguilera', 'd'],
