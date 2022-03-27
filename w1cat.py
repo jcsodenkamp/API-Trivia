@@ -1,5 +1,5 @@
 
-from tkinter import N
+
 import time
 import sys
 
