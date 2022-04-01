@@ -5,7 +5,6 @@ import html
 import sys
 
 
-
 name = input('\nWhat is your name? ')
 print(f'Hello {name}! ')
 # https://opentdb.com/api_config.php
@@ -96,6 +95,8 @@ while True:
         # Remove HTML encodings from question and choices
         question = html.unescape(question)
         choices = [html.unescape(choice) for choice in choices]
+        answerMap = {'1': choices[0], '2': choices[1],
+                     '3': choices[2], '4': choices[3]}
 
         # trivia_json is now a Python dictionary containing 10 random trivia questions requested from the trivia API. The questions can be accessed such as this:
         score = 0
@@ -104,15 +105,19 @@ while True:
         # Display question and choices
         print(f"{category}\tDifficulty: {difficulty}")
         print(f"\n{question}")
-        for index, choice in enumerate(choices):
-            print(f"{index}) {choice}")
+        print(answer)
+        for index, choice in answerMap.items():
+            print(f"{index}. {choice}")
         user_choice = input('Select your answer ')
+
+        print(f'{user_choice}')
         if user_choice == answer:
             print("Correct\n")
-            score + 1
+            score = score + 1
         else:
             print("\nSorry that is" + "\033[31m" + " incorrect" +
                   "\033[0m" + ", the correct answer is: {0}\n".format(answer))
+        print(f'Your score is: {score}')
     if score > 7:
         print(f'Your final score is {score} out of 10 you win')
     else:
