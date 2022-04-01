@@ -2,7 +2,7 @@ from pip._vendor import requests
 import json
 import random
 import html
-import sys
+
 
 
 name = input('\nWhat is your name? ')
@@ -99,18 +99,18 @@ while True:
                      '3': choices[2], '4': choices[3]}
 
         # trivia_json is now a Python dictionary containing 10 random trivia questions requested from the trivia API. The questions can be accessed such as this:
-        score = 0
         # randomize the choices
         random.shuffle(choices)
         # Display question and choices
+        score = 0
         print(f"{category}\tDifficulty: {difficulty}")
         print(f"\n{question}")
-        print(answer)
-        for index, choice in answerMap.items():
-            print(f"{index}. {choice}")
+        print(answer) # <------ printed this so I know the answer to input, I will take it out later
+        for key, choices in answerMap.items():
+            print(f"{key}. {choices}")
         user_choice = input('Select your answer ')
 
-        print(f'{user_choice}')
+        print(f'You chose: {user_choice}')
         if user_choice == answer:
             print("Correct\n")
             score = score + 1
